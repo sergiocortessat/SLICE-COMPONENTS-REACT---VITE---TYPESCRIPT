@@ -9,7 +9,8 @@ import "../styles/PageEditor.scss";
 import useSliceHandler from "../hooks/useSliceHandler";
 
 const PageBuilder: React.FC = () => {
-  const { slices, handleAddSlice, handleRemoveSlice, handleUpdateSlice } = useSliceHandler();
+  const { slices, handleAddSlice, handleRemoveSlice, handleUpdateSlice } =
+    useSliceHandler();
 
   // const renderSliceComponent = (slice: Slices) => {
   //   switch (slice.type) {
@@ -73,18 +74,19 @@ const PageBuilder: React.FC = () => {
         </div>
         <h3>Add Slices</h3>
         <div className="slices-add">
-          {buttons && buttons.map((button) => (
-            <div className="slices-add--button-container" key={button}>
-              <ButtonComponent
-                className={`button-${button}-slice`}
-                onAdd={handleAddSlice}
-                type={"add"}
-                value={button as Slice["type"]}
-                img={AddSVG}
-                name={`${button.charAt(0).toUpperCase() + button.slice(1)}`}
-              />
-            </div>
-          ))}
+          {buttons &&
+            buttons.map((button) => (
+              <div className="slices-add--button-container" key={button}>
+                <ButtonComponent
+                  className={`button-${button}-slice`}
+                  onAdd={handleAddSlice}
+                  type={"add"}
+                  value={button as Slice["type"]}
+                  img={AddSVG}
+                  name={`${button.charAt(0).toUpperCase() + button.slice(1)}`}
+                />
+              </div>
+            ))}
         </div>
       </div>
     </div>

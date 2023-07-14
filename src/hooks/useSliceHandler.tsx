@@ -1,6 +1,11 @@
 import { useState, useEffect } from "react";
 import { Slice, HeroSlice, ArticleSlice, PriceSlice } from "../types/types";
-import { loadPersistedSlices, addSlice, removeSlice, updateSlice } from "../utils/pageBuilderUtils";
+import {
+  loadPersistedSlices,
+  addSlice,
+  removeSlice,
+  updateSlice,
+} from "../utils/pageBuilderUtils";
 
 const useSliceHandler = () => {
   const [slices, setSlices] = useState<Slice[]>([]);

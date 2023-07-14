@@ -21,7 +21,6 @@ const HeroSlice: React.FC<Props> = ({ slice, onUpdate, onRemove }) => {
   //   localStorage.setItem(`slice-${slice.id}`, JSON.stringify(slice));
   // }, [title, subtitle, slice]);
 
-
   const handleTitleChange = (e: ChangeEvent<HTMLInputElement>) => {
     const newTitle = e.target.value;
     setTitle(newTitle);
@@ -51,21 +50,21 @@ const HeroSlice: React.FC<Props> = ({ slice, onUpdate, onRemove }) => {
         <ButtonComponent onRemove={onRemove} id={slice.id} type="remove" />
       </div>
       <div className="hero-slice-content">
-          <Input
-            type="text"
-            value={title}
-            onChangeHandler={handleTitleChange}
-            placeHolder="Title"
-            label="Title"
-            error={error}
-          />
-          <Input
-            type="text"
-            value={subtitle}
-            onChangeHandler={handleSubtitleChange}
-            placeHolder="Subtitle"
-            label="Subtitle"
-          />
+        <Input
+          type="text"
+          value={title}
+          onChangeHandler={handleTitleChange}
+          placeHolder="Title"
+          label="Title"
+          error={error}
+        />
+        <Input
+          type="text"
+          value={subtitle}
+          onChangeHandler={handleSubtitleChange}
+          placeHolder="Subtitle"
+          label="Subtitle"
+        />
       </div>
       <div className="error-container">
         {error && <ErrorComponent message={error} />}

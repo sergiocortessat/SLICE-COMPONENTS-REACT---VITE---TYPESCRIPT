@@ -5,7 +5,7 @@ import ErrorComponent from "../ErrorComponent";
 import SelectComponent from "../UI/SelectComponent";
 import ButtonComponent from "../UI/ButtonComponent";
 import TextAreaComponent from "../UI/TextAreaComponent";
-import '../..//styles//ArticleSlice.scss'
+import "../..//styles//ArticleSlice.scss";
 
 interface Props {
   slice: ArticleSliceType;
@@ -86,7 +86,7 @@ const ArticleSlice: React.FC<Props> = ({ slice, onUpdate, onRemove }) => {
           value={content}
           onChange={handleContentChange}
           placeHolder="Content"
-          />
+        />
         <SelectComponent
           className={colorClassName(color)}
           value={color}

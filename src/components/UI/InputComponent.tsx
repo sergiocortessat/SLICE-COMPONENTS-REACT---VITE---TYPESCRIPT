@@ -8,7 +8,7 @@ interface InputProps {
   min?: number;
   max?: number;
   label: string;
-  error?:  string;
+  error?: string;
 }
 
 const Input: React.FC<InputProps> = ({
@@ -30,7 +30,7 @@ const Input: React.FC<InputProps> = ({
           placeholder={placeHolder}
           min={min ? min : 0}
           max={max ? max : 100}
-        />        
+        />
       );
     } else {
       return (
@@ -50,7 +50,7 @@ const Input: React.FC<InputProps> = ({
         label.charAt(0).toUpperCase() + label.slice(1)
       }`}</label>
       {renderInput()}
-        {/* {error && <ErrorComponent message={error} />} */}
+      {/* {error && <ErrorComponent message={error} />} */}
     </>
   );
 };
