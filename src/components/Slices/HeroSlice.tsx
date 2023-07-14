@@ -2,7 +2,6 @@ import React, { useState, useEffect, ChangeEvent } from "react";
 import { HeroSlice as HeroSliceType } from "../../types/types";
 import Input from "../UI/InputComponent";
 import ButtonComponent from "../UI/ButtonComponent";
-import { removeSlice } from "../../utils/pageBuilderUtils";
 import ErrorComponent from "../ErrorComponent";
 
 interface Props {

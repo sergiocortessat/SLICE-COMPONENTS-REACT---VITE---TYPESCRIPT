@@ -11,36 +11,36 @@ import useSliceHandler from "../hooks/useSliceHandler";
 const PageBuilder: React.FC = () => {
   const { slices, handleAddSlice, handleRemoveSlice, handleUpdateSlice } = useSliceHandler();
 
-  const renderSliceComponent = (slice: Slices) => {
-    switch (slice.type) {
-      case "hero":
-        return (
-          <HeroSliceComponent
-            slice={slice}
-            onUpdate={handleUpdateSlice}
-            onRemove={handleRemoveSlice}
-          />
-        );
-      case "article":
-        return (
-          <ArticleSliceComponent
-            slice={slice}
-            onUpdate={handleUpdateSlice}
-            onRemove={handleRemoveSlice}
-          />
-        );
-      case "price":
-        return (
-          <PriceSliceComponent
-            slice={slice}
-            onUpdate={handleUpdateSlice}
-            onRemove={handleRemoveSlice}
-          />
-        );
-      default:
-        return null;
-    }
-  };
+  // const renderSliceComponent = (slice: Slices) => {
+  //   switch (slice.type) {
+  //     case "hero":
+  //       return (
+  //         <HeroSliceComponent
+  //           slice={slice}
+  //           onUpdate={handleUpdateSlice}
+  //           onRemove={handleRemoveSlice}
+  //         />
+  //       );
+  //     case "article":
+  //       return (
+  //         <ArticleSliceComponent
+  //           slice={slice}
+  //           onUpdate={handleUpdateSlice}
+  //           onRemove={handleRemoveSlice}
+  //         />
+  //       );
+  //     case "price":
+  //       return (
+  //         <PriceSliceComponent
+  //           slice={slice}
+  //           onUpdate={handleUpdateSlice}
+  //           onRemove={handleRemoveSlice}
+  //         />
+  //       );
+  //     default:
+  //       return null;
+  //   }
+  // };
 
   const buttons = ["hero", "article", "price"];
 

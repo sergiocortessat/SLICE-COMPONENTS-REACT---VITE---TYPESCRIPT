@@ -1,10 +1,6 @@
 import React from "react";
 import {
   Slice,
-  HeroSlice,
-  ArticleSlice,
-  PriceSlice,
-  SliceUnion,
   SliceType,
 } from "../../types/types";
 

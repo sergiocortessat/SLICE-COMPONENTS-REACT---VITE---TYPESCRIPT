@@ -1,5 +1,4 @@
 import React, {useState} from "react";
-import ErrorComponent from "../ErrorComponent";
 
 interface InputProps {
   type: string;
