@@ -1,4 +1,4 @@
-import React, { useState, useEffect, ChangeEvent } from "react";
+import React, { useState, ChangeEvent } from "react";
 import { HeroSlice as HeroSliceType } from "../../types/types";
 import Input from "../UI/InputComponent";
 import ButtonComponent from "../UI/ButtonComponent";

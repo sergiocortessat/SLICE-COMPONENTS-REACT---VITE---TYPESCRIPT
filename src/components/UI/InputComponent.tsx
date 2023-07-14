@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 
 interface InputProps {
   type: string;
@@ -19,7 +19,6 @@ const Input: React.FC<InputProps> = ({
   placeHolder,
   min,
   max,
-  error,
 }) => {
   const renderInput = () => {
     if (type === "number") {
