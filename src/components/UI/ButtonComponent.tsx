@@ -1,8 +1,5 @@
 import React from "react";
-import {
-  Slice,
-  SliceType,
-} from "../../types/types";
+import { Slice, SliceType } from "../../types/types";
 
 interface ButtonProps {
   type: string;
