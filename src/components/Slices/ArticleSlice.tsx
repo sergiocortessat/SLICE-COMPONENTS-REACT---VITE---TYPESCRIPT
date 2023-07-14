@@ -1,11 +1,11 @@
 import React, { useState, useEffect, ChangeEvent } from "react";
 import { ArticleSlice as ArticleSliceType } from "../../types/types";
-import "../styles/ArticleSlice.scss";
 import Input from "../UI/InputComponent";
 import ErrorComponent from "../ErrorComponent";
 import SelectComponent from "../UI/SelectComponent";
 import ButtonComponent from "../UI/ButtonComponent";
 import TextAreaComponent from "../UI/TextAreaComponent";
+import '../..//styles//ArticleSlice.scss'
 
 interface Props {
   slice: ArticleSliceType;

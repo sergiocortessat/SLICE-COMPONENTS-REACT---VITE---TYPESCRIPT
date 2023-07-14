@@ -57,15 +57,15 @@ Terminal or similar to execute the program.
 ## Clone project
 
 - To get a local copy up and running follow these simple example steps.
-- Clone this repository with git clone ```https://github.com/sergiocortessat/scs-weather-app``` using your terminal or command line.
-- Change to the project directory by entering: ```cd scs-weather-app``` in the terminal.
+- Clone this repository with git clone ```https://github.com/sergiocortessat/SLICE-COMPONENTS-REACT---VITE---TYPESCRIPT``` using your terminal or command line.
+- Change to the project directory by entering: ```cd SLICE-COMPONENTS-REACT---VITE---TYPESCRIPT``` in the terminal.
 - Enter the project folder and set the repo with its correspondent using npm install.
 - After this run the command npx run start
 - If the project cant be build, please run npx webpack.
 
 ## Command line steps
 ```
-- $ git clone `$ git clone https://github.com/sergiocortessat/scs-weather-app
+- $ git clone `$ git clone https://github.com/sergiocortessat/SLICE-COMPONENTS-REACT---VITE---TYPESCRIPT
 - $ git checkout develop
 - $ cd scs-weather-app
 - $npm i
