@@ -11,7 +11,7 @@ interface Props {
 }
 
 const HeroSlice: React.FC<Props> = ({ slice, onUpdate, onRemove }) => {
-  const { title: initialTitle, subtitle: initialSub, type } = slice;
+  const { title: initialTitle, subtitle: initialSub } = slice;
   const [title, setTitle] = useState(initialTitle);
   const [subtitle, setSubtitle] = useState(initialSub);
   const [error, setError] = useState("");

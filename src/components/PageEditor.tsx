@@ -1,5 +1,5 @@
 import React from "react";
-import { Slice, SliceUnion, Slices } from "../types/types";
+import { Slice, SliceUnion } from "../types/types";
 import HeroSliceComponent from "./Slices/HeroSlice";
 import ArticleSliceComponent from "./Slices/ArticleSlice";
 import PriceSliceComponent from "./Slices/PriceSlice";
