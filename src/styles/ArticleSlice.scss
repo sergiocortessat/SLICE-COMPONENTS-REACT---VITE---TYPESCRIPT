@@ -1,0 +1,21 @@
+.article-slice {
+  &-content {
+    &-select--color {
+      width: 20%;
+    }
+    &-select--color-red {
+      background: #f0070b;
+    }
+
+    &-select--color-blue {
+      background: #4a0df1;
+    }
+    &-select--color-yellow {
+      background: #daf10d;
+    }
+
+    &-select--color-green {
+      background: #0af806;
+    }
+  }
+}
