@@ -28,7 +28,7 @@
 
 ## Live Version
 
-* [Live Demo](https://scs-weather-app.vercel.app/) 
+* [Live Demo](https://slice-components.vercel.app/) 
 
 <!-- ABOUT THE PROJECT   -->
 ## About The Project
