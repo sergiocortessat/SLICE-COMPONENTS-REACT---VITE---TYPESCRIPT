@@ -4,6 +4,7 @@ import { PriceSlice as PriceSliceType } from "../../types/types";
 import Input from "../UI/InputComponent";
 import ButtonComponent from "../UI/ButtonComponent";
 import ErrorComponent from "../ErrorComponent";
+import { testIdHandler } from "../../utils/pageBuilderUtils";
 
 interface Props {
   slice: PriceSliceType;
@@ -52,6 +53,10 @@ const PriceSlice: React.FC<Props> = ({ slice, onUpdate, onRemove }) => {
     }
   };
 
+  const testHandler = (field: string) => {
+    return testIdHandler(slice.type, field);
+  };
+
   return (
     <div className="price-slice">
       <div className="price-slice-header">
@@ -65,6 +70,7 @@ const PriceSlice: React.FC<Props> = ({ slice, onUpdate, onRemove }) => {
           onChangeHandler={handleTitleChange}
           placeHolder="text input"
           label="Title"
+          testId={testHandler("title")}
         />
         <Input
           type="number"
@@ -73,6 +79,7 @@ const PriceSlice: React.FC<Props> = ({ slice, onUpdate, onRemove }) => {
           onChangeHandler={handlePriceChange}
           placeHolder="1"
           label="Price"
+          testId={testHandler("price")}
         />
       </div>
       <div className="error-container">

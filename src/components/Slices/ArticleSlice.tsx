@@ -6,6 +6,9 @@ import SelectComponent from "../UI/SelectComponent";
 import ButtonComponent from "../UI/ButtonComponent";
 import TextAreaComponent from "../UI/TextAreaComponent";
 import "../..//styles//ArticleSlice.scss";
+import {
+  testIdHandler,
+} from "../../utils/pageBuilderUtils";
 
 interface Props {
   slice: ArticleSliceType;
@@ -24,6 +27,9 @@ const ArticleSlice: React.FC<Props> = ({ slice, onUpdate, onRemove }) => {
   const [content, setContent] = useState(initialContent);
   const [color, setColor] = useState(initialColor || "red");
   const [error, setError] = useState("");
+  const titleInputLabel = "title";
+  const contentInputLabel = "content";
+  const colorInputLabel = "color";
 
   // useEffect(() => {
   //   // Save data to localStorage whenever title, content, or color change
@@ -68,8 +74,12 @@ const ArticleSlice: React.FC<Props> = ({ slice, onUpdate, onRemove }) => {
     return `article-slice-content-select--color article-slice-content-select--color-${color}`;
   };
 
+  const testHandler = (field: string) => {
+    return testIdHandler(slice.type, field);
+  };
+
   return (
-    <div className="article-slice">
+    <div className="article-slice" data-testid='article-slice'>
       <div className="article-slice-header">
         <label>Article Slice</label>
         <ButtonComponent onRemove={onRemove} id={slice.id} type="remove" />
@@ -79,19 +89,22 @@ const ArticleSlice: React.FC<Props> = ({ slice, onUpdate, onRemove }) => {
           type="text"
           value={title}
           onChangeHandler={handleTitleChange}
-          placeHolder="Title"
-          label="Title"
+          placeHolder={titleInputLabel}
+          label={titleInputLabel}
+          testId= {testHandler(titleInputLabel)}
         />
         <TextAreaComponent
           value={content}
           onChange={handleContentChange}
-          placeHolder="Content"
+          placeHolder={contentInputLabel}
+          testId={testHandler(contentInputLabel)}
         />
         <SelectComponent
           className={colorClassName(color)}
           value={color}
           onChange={handleColorChange}
           options={["red", "blue", "yellow", "green"]}
+          testId={testHandler(colorInputLabel)}
         />
       </div>
       <div className="error-container">

@@ -48,3 +48,8 @@ export const updateSlice = (
   saveSlicesToLocalStorage(newUpdateSlice);
   return newUpdateSlice;
 };
+
+export const testIdHandler = (id: string, ext: string): string => {
+  const lowerCaseExt = ext.toLowerCase();
+  return `${id}-${lowerCaseExt}`;
+}

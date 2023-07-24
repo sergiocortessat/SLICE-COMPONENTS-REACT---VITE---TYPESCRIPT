@@ -10,7 +10,7 @@ import useSliceHandler from "../hooks/useSliceHandler";
 
 const PageBuilder: React.FC = () => {
   const { slices, handleAddSlice, handleRemoveSlice, handleUpdateSlice } =
-    useSliceHandler();
+    useSliceHandler()
 
   // const renderSliceComponent = (slice: Slices) => {
   //   switch (slice.type) {
@@ -51,6 +51,7 @@ const PageBuilder: React.FC = () => {
       article: ArticleSliceComponent,
       price: PriceSliceComponent,
     };
+    console.log(slice);
     const Component = sliceComponentMap[slice.type];
     return (
       <Component

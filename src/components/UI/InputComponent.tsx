@@ -9,6 +9,7 @@ interface InputProps {
   max?: number;
   label: string;
   error?: string;
+  testId: string;
 }
 
 const Input: React.FC<InputProps> = ({
@@ -19,6 +20,7 @@ const Input: React.FC<InputProps> = ({
   placeHolder,
   min,
   max,
+  testId
 }) => {
   const renderInput = () => {
     if (type === "number") {
@@ -30,6 +32,7 @@ const Input: React.FC<InputProps> = ({
           placeholder={placeHolder}
           min={min ? min : 0}
           max={max ? max : 100}
+          data-testid={testId}
         />
       );
     } else {
@@ -39,6 +42,7 @@ const Input: React.FC<InputProps> = ({
           value={value}
           onChange={onChangeHandler}
           placeholder={placeHolder}
+          data-testid={testId}
         />
       );
     }

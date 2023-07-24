@@ -37,11 +37,11 @@ const ButtonComponent: React.FC<ButtonProps> = ({
   const renderButton = () => {
     switch (type) {
       case "remove":
-        return <button onClick={() => handleRemove()}>Remove</button>;
+        return <button data-testid='remove-button' onClick={() => handleRemove()}>Remove</button>;
       case "add":
         return (
           <>
-            <button onClick={() => handleAdd()} className={className}>
+            <button data-testid={name} onClick={() => handleAdd()} className={className}>
               <img src={img} />
             </button>
             <p>{name}</p>

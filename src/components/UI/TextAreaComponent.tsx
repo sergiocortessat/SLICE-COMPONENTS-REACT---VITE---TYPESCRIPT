@@ -4,12 +4,14 @@ interface TextAreaComponentProp {
   value: string;
   onChange: (e: React.ChangeEvent<HTMLTextAreaElement>) => void;
   placeHolder: string;
+  testId: string;
 }
 
 const TextAreaComponent: React.FC<TextAreaComponentProp> = ({
   value,
   onChange,
   placeHolder,
+  testId,
 }) => {
   return (
     <textarea
@@ -17,6 +19,7 @@ const TextAreaComponent: React.FC<TextAreaComponentProp> = ({
       value={value}
       placeholder={placeHolder}
       onChange={onChange}
+      data-testid={testId}
     />
   );
 };

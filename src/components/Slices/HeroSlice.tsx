@@ -3,6 +3,7 @@ import { HeroSlice as HeroSliceType } from "../../types/types";
 import Input from "../UI/InputComponent";
 import ButtonComponent from "../UI/ButtonComponent";
 import ErrorComponent from "../ErrorComponent";
+import { testIdHandler } from "../../utils/pageBuilderUtils";
 
 interface Props {
   slice: HeroSliceType;
@@ -15,6 +16,9 @@ const HeroSlice: React.FC<Props> = ({ slice, onUpdate, onRemove }) => {
   const [title, setTitle] = useState(initialTitle);
   const [subtitle, setSubtitle] = useState(initialSub);
   const [error, setError] = useState("");
+
+const titleInputLabel = "title";
+const subtitleInputLabel = "subtitle";
 
   // useEffect(() => {
   //   // Save data to localStorage whenever title or subtitle change
@@ -43,6 +47,10 @@ const HeroSlice: React.FC<Props> = ({ slice, onUpdate, onRemove }) => {
     }
   };
 
+  const testHandler = (field: string) => {
+    return testIdHandler(slice.type, field);
+  };
+
   return (
     <div className="hero-slice">
       <div className="hero-slice-header">
@@ -54,9 +62,10 @@ const HeroSlice: React.FC<Props> = ({ slice, onUpdate, onRemove }) => {
           type="text"
           value={title}
           onChangeHandler={handleTitleChange}
-          placeHolder="Title"
-          label="Title"
+          placeHolder={titleInputLabel}
+          label={titleInputLabel}
           error={error}
+          testId={testHandler(titleInputLabel)}
         />
         <Input
           type="text"
@@ -64,6 +73,7 @@ const HeroSlice: React.FC<Props> = ({ slice, onUpdate, onRemove }) => {
           onChangeHandler={handleSubtitleChange}
           placeHolder="Subtitle"
           label="Subtitle"
+          testId={testHandler("subtitle")}
         />
       </div>
       <div className="error-container">
